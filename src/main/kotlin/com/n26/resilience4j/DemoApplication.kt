@@ -1,14 +1,11 @@
 package com.n26.resilience4j
 
-import org.springframework.boot.SpringApplication
-
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
-object DemoApplication {
+class DemoApplication
 
-    @JvmStatic
-    fun main(args: Array<String>) {
-        SpringApplication.run(DemoApplication::class.java, *args)
-    }
+fun main(args: Array<String>) {
+    runApplication<DemoApplication>(*args)
 }
