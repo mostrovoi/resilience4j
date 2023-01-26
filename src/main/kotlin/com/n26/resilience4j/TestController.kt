@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class TestController(val ipHttpService: IpHttpService) {
 
     @GetMapping("/ip")
-    fun getIp() : String {
-        return ipHttpService.getIpAddress()
+    fun getIp() : IpAddress {
+        return ipHttpService.getIpAddress().getResponse()
     }
 }
